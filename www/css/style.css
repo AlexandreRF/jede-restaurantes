@@ -1,0 +1,39 @@
+.titulos {
+    
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    color: #0E0D0D;
+    border-bottom: double;
+}
+
+.cabecalho {
+    font-family: 'Archivo Black', sans-serif;
+    color: #F01A1A;
+}
+
+.icones {
+    color: #0E0D0D;
+}
+
+.citacoes {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+}
+
+.imagens_entrada {
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    background-color: #0E0D0D;
+}
+
+.texto {
+    color: #FFFFFF;
+    text-justify: auto;
+}
+
+.navegacao_autenticacao {
+    background-color: #0E0D0D;
+}
