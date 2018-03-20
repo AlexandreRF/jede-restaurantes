@@ -1,10 +1,10 @@
- // Initialize Firebase
- var config = {
-    apiKey: "AIzaSyCF6sT-pzr_0IKgpiws6TLcdjTrnTJTsLI",
-    authDomain: "bikcraft-7c939.firebaseapp.com",
-    databaseURL: "https://bikcraft-7c939.firebaseio.com",
-    projectId: "bikcraft-7c939",
-    storageBucket: "bikcraft-7c939.appspot.com",
-    messagingSenderId: "517615854008"
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCvg9N8FDJ1ue3Pv4wlsD33y-IQddbe6N0",
+    authDomain: "jede-restaurantes.firebaseapp.com",
+    databaseURL: "https://jede-restaurantes.firebaseio.com",
+    projectId: "jede-restaurantes",
+    storageBucket: "jede-restaurantes.appspot.com",
+    messagingSenderId: "140561340388"
   };
   firebase.initializeApp(config);

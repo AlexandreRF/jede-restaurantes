@@ -55,7 +55,7 @@ firebase
   .createUserWithEmailAndPassword(username,password) //Promisses
   .then( function () {
     app.dialog.alert('Bem vindo: ' + username);
-    this.$$('.toobar-inner').text('Bem vindo: ' + username);
+    this.$$('.navegacao_autenticacao').text('Bem vindo: ' + username);
     // displayName.innerText = 'Bem vindo: ' + username;
 
   })
