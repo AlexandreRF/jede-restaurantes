@@ -3,13 +3,14 @@
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 25px;
-    color: #0E0D0D;
+    color: #FFFFFF;
     border-bottom: double;
 }
 
 .cabecalho {
     font-family: 'Archivo Black', sans-serif;
-    color: #F01A1A;
+    /* color: #F01A1A; */
+    color: #EF5656;
 }
 
 .icones {
@@ -20,6 +21,7 @@
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 16px;
+    color: #FFFFFF;
 }
 
 .imagens_entrada {
@@ -32,8 +34,64 @@
 .texto {
     color: #FFFFFF;
     text-justify: auto;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.texto_two {
+    color: #EF5656;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .navegacao_autenticacao {
     background-color: #0E0D0D;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.fundo_app {
+    background-color: #202020;
+}
+
+.topicos_menu {
+    color: #FFFFFF;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+
+
+div h3 {
+    color: #EF5656;
+    text-align: center;
+}
+
+div p {
+    color: #FFFFFF;
+    font-family: 'Libre Baskerville', serif; 
+    text-align: center;
+}
+
+/* ------------------------->     Cardápio     <--------------------------- */
+
+.semana_cardapio {
+    font-size: 20px;
+    border: #EF5656 double;
+    color: #EF5656;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+.titulos_sobre {
+    color: #EF5656;
+    text-align: center;
+    border: #EF5656 double;
+}
+
+
+/* ---------------------------------->     Sobre     <-------------------------------- */
+
+.titulos_contato {
+    color: #EF5656;
+    text-align: center;
+    border: #EF5656 double;
 }

@@ -19,6 +19,10 @@ routes = [
     path: '/cardapio/',
     url: './pages/cardapio.html',
   },
+  {
+    path: '/contato/',
+    url: './pages/contato.html',
+  },
   // Left View Pages
   {
     path: '/left-page-1/',
