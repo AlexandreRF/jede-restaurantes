@@ -1,7 +1,9 @@
 // Dom7
 var $$ = Dom7;
 $$('.logoff').hide();
+$$('.promocoes').hide();
 $$('.login-screen-open').show();
+
 
 // Framework7 App main instance
 var app  = new Framework7({
@@ -43,81 +45,144 @@ var mainView = app.views.create('.view-main', {
 });
 
 // Login Screen Demo
-$$('#my-login-screen .SignUp').on('click', function () {
-  var username = $$('#my-login-screen [name="emailInput"]').val();
-  var password = $$('#my-login-screen [name="passwordInput"]').val();
+$$('#my-login-screen .SingUp').on('click', function () {
+  var username = $$('#my-login-screen [name="email"]').val();
+  var password = $$('#my-login-screen [name="password"]').val();
 
-  // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
-
-firebase
-  .auth()
-  .createUserWithEmailAndPassword(username,password) //Promisses
-  .then( function () {
-    app.dialog.alert('Bem vindo: ' + username);
-    this.$$('.navegacao_autenticacao').text('Bem vindo: ' + username);
-    // displayName.innerText = 'Bem vindo: ' + username;
-
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(username,password)//Promisses
+    .then( function () {
+      app.dialog.alert('Bem vindo: ' + username);
+      this.$$('.toolbar-inner').text = 'Bem Vindo: ' + username;
+    })
+    .catch(function(error){
+      console.error(error.code)
+      console.error(error.message)
+      if (error.code =='auth/ivalid-email'){
+        app.dialog.alert('Email invalido no seu formato!!!');
+      }$$('#btnSalvar').on('click', function () {
+        var formData = app.form.convertToData('#form-user-content')
+        var nameInput = $$('#name [name="email"]').val();
+        var nameInput = $$('#password [name="password"]').val();
+        alert(JSON.stringify(formData))
+        firebase.database().ref().child('usuarios').push(JSON.stringify(formData))
+    });
+  app.loginScreen.close('Falha ao cadastrar, verifique o erro no console');
   })
-  .catch( function(error) {
-    console.error(error.code)
-    console.error(error.message)
-    app.dialog.alert('Falha ao cadastrar, verifique o erro no console');
-    // this.$$('.toobar-inner').text('Bem vindo' +username);
-  })
+  app.loginScreen.close('#my-login-screen');
+});
 
- // Close login screen
- app.loginScreen.close('#my-login-screen');  
+
+
+$$('#my-login-screen .SingIn').on('click', function () {
+  var username = $$('#my-login-screen [name="email"]').val();
+  var password = $$('#my-login-screen [name="password"]').val();
+
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(username,password)//Promisses
+    .then( function () {
+      app.dialog.alert('Bem vindo: ' + username);
+      this.$$('.toolbar-inner').text('Bem Vindo: ' + username + ' vc está logado!');
+      $$('.logoff').show();
+      $$('.promocoes').show();
+      $$('.login-screen-open').hide();
+      $$('input#email').val('');
+      $$('input#password').val('');
+    })
+    .catch(function(error){
+      console.error(error.code)
+      console.error(error.message)
+      if (error.code =='auth/user-not-found'){
+        app.dialog.alert('Não há registro de usuario correspondente a este identificador. O usuário pode ter sido excluído');
+      }
+        app.dialog.alert('Email invalido no seu formato!!!');
+    })
+  app.loginScreen.close('#my-login-screen');
+});
+
+
+
+// $$('#my-login-screen .SignOut').on('click', function () {
+//   app.loginScreen.close('#my-login-screen');
+//   $$('input#email').val('');
+//   $$('input#password').val('');
+//   $$('.cardapioindex').hide();
+//   firebase
+//     .auth()
+//     .signOut()
+//     .then( function () {
+//       this.$$('.toolbar-inner').text('Usuário não autenticado');
+//       app.dialog.alert('Usuário não autenticado');
+//       app.loginScreen.close('#my-login-screen');
+//       $$('.logoff').hide();
+//       $$('.login-screen-open').show();      
+//     }, function(error){
+//       console.error(error)
+//     })
+// });
+
+$$('#my-login-screen .login-screen-close').on('click', function () {
+  $$('input#email').val('');
+  $$('input#password').val('');
+});
+
+$$('.logoff').on('click', function () {
+  firebase
+    .auth()
+    .signOut()
+    .then( function () {
+      this.$$('.toolbar-inner').text('Usuário não autenticado');
+      app.dialog.alert('Usuário não autenticado');
+      $$('input#email').val('');
+      $$('input#password').val('');
+      $$('.logoff').hide();
+      $$('.promocoes').hide();
+      $$('.login-screen-open').show();
+    }, function(error){
+      console.error(error)
+    })  
+  });
+
+
+
+// $$('#my-login-screen .SingOut').on('click', function () {
+//   app.loginScreen.close('#my-login-screen');
+//     $$('input#email').val('');
+//     $$('input#password').val('');
+//     firebase
+//     .auth()
+//     .signOut()
+//     .then( function () {
+//       this.$$('.toolbar-inner').text('Usuario nao autenticado');
+//       app.dialog.alert('Usuario nao autenticado');
+//       app.loginScreen.close('#my-login-screen');
+//       $$('.logoff').hide();
+//       $$('.cardapioindex').hide();
+//       $$('.login-screen-open').show();
+//     }, function(error){
+//         console.error(error)
+//     })
+// });
+
+
+$$('#my-login-screen .login-screen-close').on('click', function () {
+  $$('input#email').val('');
+  $$('input#password').val('');
 })
-
-
-$$('#my-login-screen .SignIn').on('click', function () {
-  var username = $$('#my-login-screen [name="emailInput"]').val();
-  var password = $$('#my-login-screen [name="passwordInput"]').val();
-
-  // Alert username and password
-  app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
-
-firebase
-  .auth()
-  .signInWithEmailAndPassword(username,password) //Promisses
-  .then( function () {
-    app.dialog.alert('Bem vindo: ' + username);
-    this.$$('.toobar-inner').text('Bem vindo: ' + username + ' vc está logado!');
-    $$('.logoff').show();
-    $$('.login-screen-open').hide();
-    $$('input#emailInput').val('');
-    $$('input#passwordInput').val('');
-    // displayName.innerText = 'Bem vindo: ' + username;
-
-  })
-  .catch( function(error) {
-    console.error(error.code)
-    console.error(error.message)
-    if (error.code =='auth/invalid-email'){
-      app.dialog.alert('E-mail inválido no seu formato!!!');
-    }
-    app.dialog.alert('Falha ao cadastrar, verifique o erro no console');
-    // this.$$('.toobar-inner').text('Bem vindo' +username);
-  })
-
- // Close login screen
- app.loginScreen.close('#my-login-screen');  
-})
-
-
-$$('#my-login-screen .SignOut').on('click', function () {
- app.loginScreen.close('#my-login-screen');
- $$('input#emailInput').val('');
- $$('input#passwordInput').val('');
-firebase
+$$('.logoff').on('click', function() {
+  firebase
   .auth()
   .signOut()
-  .then( function () {
-    this.$$('.toobar-inner').text('Usuário não autenticado');
-    app.dialog.alert('Usuario não autenticado');
-    app.loginScreen.close('#my-login-screen');
+  .then( function() {
+    this.$$('.toolbar-inner').text('Usuario não autenticado');
+    app.diolog.alert('Usuario não autenticado');
+    $$('input#email').val('');
+    $$('input#password').val('');
     $$('.logoff').hide();
+    $$('.cardapioindex').hide();
+    $$('.promocoes').hide();
     $$('.login-screen-open').show();
   }, function(error){
     console.error(error)
@@ -125,26 +190,24 @@ firebase
 });
 
 
-$$('#my-login-screen .login-screen-close').on('click', function () {
-  $$('input#emailInput').val('');
-  $$('input#passwordInput').val('');
-})
+// $$('#addButton').on('click', function () {
+//   var nome = $$('#nome').val();
+//   var email = $$('#emailorcamento').val();
+//   var telefone = $$('#telefone').val();
+//   var mensagem = $$('#mensagem').val();
 
-$$('.logoff').on('click', function () {
-  firebase
-  .auth()
-  .signOut()
-  .then( function () {
-    this.$$('.toolbar-inner').text('Usuário não autenticado');
-    app.dialog.alert('Usuário não autenticado');
-    $$('input#emailInput').val('');
-    $$('input#passwordInput').val('');
-    $$('.logoff').hide();
-    $$('.login-screen-open').show();
-  }, function(error){
-    console.error(error)
-  })
-})
-    
+//   var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem}
+//   console.log(formData);
+//   firebase.database().ref().child('cardapio').push(formData)
+//   .then( function () {
+//     app.dialog.alert('Pedido Efetuado com Sucesso');
+//     $$('input#nome').val('');
+//     $$('input#emailorcamento').val('');
+//     $$('input#telefone').val('');
+//     $$('input#mensagem').val('');
+//   }, function(error){
+//     app.dialog.alert('Erro, confira o console');
+//     console.error(error)
+//   })
+// });
 
- 

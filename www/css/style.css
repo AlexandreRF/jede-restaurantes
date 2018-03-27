@@ -4,7 +4,6 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 25px;
     color: #FFFFFF;
-    border-bottom: double;
 }
 
 .cabecalho {
@@ -94,4 +93,15 @@ div p {
     color: #EF5656;
     text-align: center;
     border: #EF5656 double;
+}
+
+
+
+.logo {
+    width: 5px;
+}
+
+.fontecardapio {
+    font-size: 15px;
+    font-family: Arial;
 }

@@ -15,13 +15,21 @@ routes = [
     path: '/sobre/',
     url: './pages/sobre.html',
   },
-  {
-    path: '/cardapio/',
-    url: './pages/cardapio.html',
-  },
+  // {
+  //   path: '/cardapio/',
+  //   url: './pages/cardapio.html',
+  // },
   {
     path: '/contato/',
     url: './pages/contato.html',
+  },
+  {
+    path: '/cardapio/',
+    url: './pages/listar_cardapio.html',
+  },
+  {
+    path: '/promocoes/',
+    url: './pages/promocoes.html',
   },
   // Left View Pages
   {

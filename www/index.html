@@ -56,13 +56,28 @@
                 <div class="block-title"></div>
                 <div class="list links-list">
                   <ul class="topicos_menu">
-                    <li><a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a></li>
-                    <li><a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a></li>
-                    <li><a href="/cardapio/" data-view=".view-main" class="panel-close">Cardápio</a></li>
-                    <li><a href="/contato/" data-view=".view-main" class="panel-close">Contato</a></li>                    
-                    <li><a href="/left-page-3/">Notificação</a></li>
+                    <li>
+                      <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a></li>
+                    <li>
+                      <a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a></li>
+                    <li>
+                    <li>
+                      <a href="/cardapio/" data-view=".view-main" class="panel-close cardapioindex">Cardápio</a>
+                    </li>
+                      <a href="/contato/" data-view=".view-main" class="panel-close">Contato</a>
+                    </li>                    
+                    <!-- <li><a href="/left-page-3/">Notificação</a></li> -->
+                    <li>
+                        <a href="/promocoes/" data-view=".view-main" class="panel-close promocoes">Promoções</a>
+                    </li>
+
                     <!-- <li><a href="/form/" data-view=".view-main" class="panel-close">Cadastrar</a></li> -->
-                    <li><a href="#" data-popup=".form-cadastro" class="popup-open">Cadastro</a></li>
+                    <!-- <li>
+                      <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">LOGAR</a>
+                    </li> -->
+                    <li>
+                      <a href="#" class="logoff">Sair</a>                        
+                    </li>
                   </ul>
                 </div>
                 <!-- <div class="block-title">Control Main View</div>
@@ -113,7 +128,7 @@
                   </a>
                 </div>
                 <div class="title sliding cabecalho">Jede Restaurantes</div>
-                
+               
                 <div class="right">
                   <img src="img/favicon.png" alt="">                   
                   <!-- <a href="#" class="link icon-only panel-open" data-panel="right">
@@ -136,10 +151,12 @@
                 
               <div class="block block-strong">
 
-                <h2 class="titulos">BEM-VINDOS AO JEDE RESTAURANTES</h2>
-
+                <h2 class="titulos">BEM-VINDOS</h2>
+                <h2 class="titulos">AO</h2>
+                <img src="img/logo.png" alt="Logo Jede">
               </div>
-              <img src="img/jede-index.jpg" alt="Logo Jede">  
+              
+              <img src="img/jede-index.jpg" alt="Img entrada">  
               <div class="citacoes">
                   <p>Oferecemos sempre o melhor para você</p>
                   <p>Venha conferir nossa variedade de pratos e sobremesas</p>
@@ -172,11 +189,11 @@
                   <div class="col-50">
                     <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
                   </div> -->
-                  <div class="col-50">
+                  <!-- <div class="col-50">
                     <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
                   </div>
                 </div>
-              </div>
+              </div> -->
     
               <!-- <div class="block-title">Panels</div>
               <div class="block block-strong">
@@ -212,20 +229,51 @@
         </div> -->
     
         <!-- Popup -->
-        <div class="popup" id="my-popup">
+        <div class="login-screen panel-cover theme-dark" id="my-login-screen">
           <div class="view">
             <div class="page">
-              <div class="navbar color-theme-black">
+              <div class="navbar">
                 <div class="navbar-inner">
-                  <div class="title">Login</div>
-                  <div class="right">
-                    <a href="#" class="link popup-close">Voltar</a>
+                    <div class="right">
+                        <a href="#" data-login-screen="#my-login-screen" class="login-screen-close"><i class="f7-icons">close_round</i></a>
                   </div>
                 </div>
-              </div>
-              <div class="page-content">
-                <div class="block">
-                  <p>Popup content goes here.</p>
+              </div>     
+              <div class="page-content login-screen-content">
+                <div class="login-screen-title">Login</div>
+                <div class="list">
+                  <ul>
+                    <li class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">E-mail</div>
+                        <div class="item-input-wrap">
+                          <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Senha</div>
+                        <div class="item-input-wrap">
+                          <input type="password" name="password" id="password" placeholder="Digite sua Senha">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <a href="#" class="item-link list-button login-button SingUp" id="email"> Cadastrar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button SingIn" id="password">Entrar</a>
+                    </li>
+                    <li>
+                      <a href="#" class="item-link list-button login-button SingOut">Sair</a>
+                    </li>
+                  </ul>
+                  <div class="block-footer">Some text about login information.<br>Click "Sign Out" to close Login Screen</div>
                 </div>
               </div>
             </div>
@@ -454,10 +502,10 @@
                         </li>
                       </ul>
                     </div>
-                  </div> -->
-                </div>
+                  </div> 
+                </div>-->
     
-        <!-- Login Screen -->
+        <!-- Login Screen 
         <div class="login-screen panel-cover theme-dark" id="my-login-screen">
           <div class="view">
             <div class="page">
@@ -504,11 +552,12 @@
                   </ul>
                   <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
                 </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
       </div>
+    </div>
      
       
     
@@ -522,6 +571,9 @@
       <script src="js/firebase.js"></script>
       <script src="js/firebaseapp.js"></script>
       <script src="js/app.js"></script>
+      <script src="js/cardapio.js"></script>
+      <script src="js/promocoes.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>
 
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <!-- <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script> -->
