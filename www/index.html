@@ -66,18 +66,15 @@
                     </li>
                       <a href="/contato/" data-view=".view-main" class="panel-close">Contato</a>
                     </li>                    
-                    <!-- <li><a href="/left-page-3/">Notificação</a></li> -->
                     <li>
                         <a href="/promocoes/" data-view=".view-main" class="panel-close promocoes">Promoções</a>
                     </li>
-
-                    <!-- <li><a href="/form/" data-view=".view-main" class="panel-close">Cadastrar</a></li> -->
-                    <!-- <li>
-                      <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">LOGAR</a>
-                    </li> -->
                     <li>
-                      <a href="#" class="logoff">Sair</a>                        
+                      <a href="#" data-popup=".form-firebase" class="popup-open pedidoindex">Pedido</a>
                     </li>
+                    <li>
+                        <a href="#" class="logoff">Sair</a>                        
+                      </li>
                   </ul>
                 </div>
                 <!-- <div class="block-title">Control Main View</div>
@@ -147,20 +144,41 @@
               </div>
             </div>
             <!-- Scrollable page content-->           
-            <div class="page-content fundo_app">
-                
-              <div class="block block-strong">
-
-                <h2 class="titulos">BEM-VINDOS</h2>
-                <h2 class="titulos">AO</h2>
+            <div class="titulos page-content fundo_app">               
+              <!-- <div class="block block-strong"> -->
+              <div>
+                <h2 class="titulos">SEJA BEM-VINDO</h2>
+                <h2 class="titulos">AO</h2>             
                 <img src="img/logo.png" alt="Logo Jede">
               </div>
-              
-              <img src="img/jede-index.jpg" alt="Img entrada">  
-              <div class="citacoes">
-                  <p>Oferecemos sempre o melhor para você</p>
-                  <p>Venha conferir nossa variedade de pratos e sobremesas</p>
-              </div>                      
+              <!-- </div> -->
+
+              <div class="swiper-container swiper-init demo-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/jede-index.jpg" alt="Img entrada 1"></div>
+                  <div class="swiper-slide"><img src="img/img1.jpg" alt="Img entrada 2"></div>
+                  <div class="swiper-slide"><img src="img/img2.jpg" alt="Img entrada 3"></div>
+                </div>
+              </div>
+              <div class="swiper-container swiper-init demo-swiper">
+                  <div class="citacoes swiper-wrapper">
+                    <div class="swiper-slide">
+                        <P>“O melhor lugar para tornar seus momentos inesquecíveis!”</P>
+                        <P>“Oferecemos sempre o melhor para você.”</P>
+                        <P>“O Jede Restaurantes sempre tem uma novidade super bacana para você! Confira nossas promoções e corra para aproveitá-las!</P>
+                    </div>
+                    <div class="swiper-slide"><P>“Venha conferir nossa variedade de pratos e sobremesas.</P></div>
+                    <div class="swiper-slide"><P>“Viva com segurança. Trabalhe com confiança.”</P></div>
+                  </div>
+                </div>
+                <div>
+                    <img src="img/img3.jpg" alt="Img entrada">
+                    <P>“Pratos deliciosos e requintados”</P>
+                </div>
+                <div class="citacoes">
+                    <P>“Com um cardápio variado e uma culinária de excelência em sabor, há mais de 5 anos conseguimos agradar os paladares mais exigentes.”</P>
+                </div>
+                                    
     
     
               <!-- <div class="block-title">Navigation</div>
@@ -281,283 +299,85 @@
         </div>
 
         
-        <div class="popup form-cadastro">
+        <div class="popup form-firebase">
           <div class="view">
-              <div class="page">                 
-                    <div class="right">
-                      <a href="#" class="link popup-close">Voltar</a>
-                    </div>        
-                        
-
-                  <div class="navbar color-theme-black">
-                    <div class="navbar-inner sliding">
-                      <div class="left">
-                        <a href="#" class="link back">
-                          <i class="icon icon-back"></i>
-                          <span class="ios-only">Back</span>
-                        </a>
-                        
-
-                      </div>
-                      <div class="title cabecalho">Cadastro</div>
-                    </div>
+            <div class="page color-theme-black">
+              <div class="navbar">
+                <div class="navbar-inner sliding">
+                  <div class="left">
+                    <a href="#" class="popup-close">
+                      <i class="icon icon-back"></i>
+                      <span class="ios-only">Voltar</span>
+                    </a>
                   </div>
-                  <div class="page-content">
-                    <!-- <div class="block-title">Cadastro</div> -->
-                    <div class="list no-hairlines-md">
-                      <ul>
-                        <li>
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              <div class="item-title item-label">Nome</div>
-                              <div class="item-input-wrap">
-                                <input type="text" placeholder="Digite seu nome"/>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              <div class="item-title item-label">E-mail</div>
-                              <div class="item-input-wrap">
-                                <input type="email" placeholder="Digite seu e-mail"/>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                            <div class="item-content item-input">
-                              <div class="item-inner">
-                                <div class="item-title item-label">Telefone</div>
-                                <div class="item-input-wrap">
-                                  <input type="tel" placeholder="Digite seu número de telefone"/>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                              <div class="item-content item-input">
-                                <div class="item-inner">
-                                  <div class="item-title item-label">Senha</div>
-                                  <div class="item-input-wrap">
-                                    <input type="password" placeholder="Digite sua Senha"/>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                        <li>
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              <div class="item-title item-label">URL</div>
-                              <div class="item-input-wrap">
-                                <input type="url" placeholder="Url"/>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        
-                       
-                        <!-- <li>
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              <div class="item-title item-label">Gender</div>
-                              <div class="item-input-wrap">
-                                <select>
-                                  <option>Male</option>
-                                  <option>Female</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </li> -->
-                        <li class="align-top">
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              <div class="item-title item-label">Mensagem</div>
-                              <div class="item-input-wrap">
-                                <textarea placeholder="Bio"></textarea>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- <div class="block-title">Buttons</div>
-                    <div class="block block-strong">
-                      <p class="row">
-                        <a href="#" class="col button">Button</a>
-                        <a href="#" class="col button button-fill">Fill</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-raised">Raised</a>
-                        <a href="#" class="col button button-raised button-fill">Raised Fill</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-round">Round</a>
-                        <a href="#" class="col button button-round button-fill">Round Fill</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-outline">Outline</a>
-                        <a href="#" class="col button button-round button-outline">Outline Round</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-small button-outline">Small</a>
-                        <a href="#" class="col button button-small button-round button-outline">Small Round</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-small button-fill">Small</a>
-                        <a href="#" class="col button button-small button-round button-fill">Small Round</a>
-                      </p>
-                      <p class="row">
-                        <a href="#" class="col button button-big button-raised">Big</a>
-                        <a href="#" class="col button button-big button-fill button-raised">Big Fill</a>
-                      </p>
-                
-                      <p class="row">
-                        <a href="#" class="col button button-big button-fill button-raised color-red">Big Red</a>
-                        <input type="submit" value="Big Green" class="col button button-big button-fill button-raised color-green"/>
-                      </p>
-                
-                    </div> -->
-                    <!-- <div class="block-title">Checkbox group</div>
-                    <div class="list">
-                      <ul>
-                        <li>
-                          <label class="item-checkbox item-content">
-                            <input type="checkbox" name="checkbox" value="Books" checked="checked"/>
-                            <i class="icon icon-checkbox"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Books</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-checkbox item-content">
-                            <input type="checkbox" name="checkbox" value="Movies"/>
-                            <i class="icon icon-checkbox"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Movies</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-checkbox item-content">
-                            <input type="checkbox" name="checkbox" value="Food"/>
-                            <i class="icon icon-checkbox"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Food</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-checkbox item-content">
-                            <input type="checkbox" name="checkbox" value="Drinks"/>
-                            <i class="icon icon-checkbox"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Drinks</div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="block-title">Radio buttons group</div>
-                    <div class="list">
-                      <ul>
-                        <li>
-                          <label class="item-radio item-content">
-                            <input type="radio" name="radio" value="Books" checked="checked"/>
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Books</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-radio item-content">
-                            <input type="radio" name="radio" value="Movies"/>
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Movies</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-radio item-content">
-                            <input type="radio" name="radio" value="Food"/>
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Food</div>
-                            </div>
-                          </label>
-                        </li>
-                        <li>
-                          <label class="item-radio item-content">
-                            <input type="radio" name="radio" value="Drinks"/>
-                            <i class="icon icon-radio"></i>
-                            <div class="item-inner">
-                              <div class="item-title">Drinks</div>
-                            </div>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div> 
-                </div>-->
-    
-        <!-- Login Screen 
-        <div class="login-screen panel-cover theme-dark" id="my-login-screen">
-          <div class="view">
-            <div class="page">
-                <div class="navbar color-theme-black">
-                    <div class="navbar-inner">
-                      <div class="right">
-                        <a href="#" class="link login-screen-close">Voltar</a>
+                  <div class="title">Contato</div>
+                </div>
+              </div>
+            
+            <div class="page-content">
+              
+                <h1>Faça o seu pedido</h1>
+          
+              <div class="block-title"></div>
+              <div class="list no-hairlines-md">
+                <ul>
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Nome</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="nome" placeholder="Digite seu nome"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-              <div class="page-content login-screen-content">
-                <div class="login-screen-title">Login</div>
-                <div class="list">
-                  <ul>
-                    <li class="item-content item-input">
+                  </li>
+                  <li>
+                    <div class="item-content item-input">
                       <div class="item-inner">
                         <div class="item-title item-label">E-mail</div>
                         <div class="item-input-wrap">
-                          <input type="email" name="emailInput" placeholder="your email">
+                          <input type="email" id="emailpedido" placeholder="E-mail"/>
                         </div>
                       </div>
-                    </li>
-                    <li class="item-content item-input">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Password</div>
+                        <div class="item-title item-label">Telefone</div>
                         <div class="item-input-wrap">
-                          <input type="password" name="passwordInput" placeholder="Your Password">
+                          <input type="tel" id="telefone" placeholder="Digite seu Telefone"/>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="list">
-                  <ul>
-                    <li>
-                      <a href="#" class="item-link list-button login-button SignUp">Sign Up</a>
-                    </li>
-                    <li>
-                      <a href="#" class="item-link list-button login-button SignIn">Sign In</a>
-                    </li>
-                    <li>
-                      <a href="#" class="item-link list-button login-button SignOut">Sign Out</a>
-                    </li>
-                  </ul>
-                  <div class="block-footer">Some text about login information.<br>Click "Sign In" to close Login Screen</div>
-                </div>
-              </div>-->
+                    </div>
+                  </li>
+                  <li class="align-top">
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Mensagem</div>
+                        <div class="item-input-wrap">
+                          <textarea id="mensagem" placeholder="Digite aqui sua mensagem"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                <p class="row">
+                  <!-- <button id="addButton" class="button button-big button-fill button-raised">Enviar</button> -->
+                  <!-- <input type="button" id="addButton" value="Enviar" class="button button-big button-fill button-raised"> -->
+                  <a href="#" id="addButton" class="col button button-big button-fill button-raised addButton">Enviar</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+                   
+       
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
      
       
     

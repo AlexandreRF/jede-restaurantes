@@ -2,6 +2,7 @@
 var $$ = Dom7;
 $$('.logoff').hide();
 $$('.promocoes').hide();
+$$('.pedidoindex').hide();
 $$('.login-screen-open').show();
 
 
@@ -87,6 +88,7 @@ $$('#my-login-screen .SingIn').on('click', function () {
       this.$$('.toolbar-inner').text('Bem Vindo: ' + username + ' vc está logado!');
       $$('.logoff').show();
       $$('.promocoes').show();
+      $$('.pedidoindex').show();
       $$('.login-screen-open').hide();
       $$('input#email').val('');
       $$('input#password').val('');
@@ -101,27 +103,6 @@ $$('#my-login-screen .SingIn').on('click', function () {
     })
   app.loginScreen.close('#my-login-screen');
 });
-
-
-
-// $$('#my-login-screen .SignOut').on('click', function () {
-//   app.loginScreen.close('#my-login-screen');
-//   $$('input#email').val('');
-//   $$('input#password').val('');
-//   $$('.cardapioindex').hide();
-//   firebase
-//     .auth()
-//     .signOut()
-//     .then( function () {
-//       this.$$('.toolbar-inner').text('Usuário não autenticado');
-//       app.dialog.alert('Usuário não autenticado');
-//       app.loginScreen.close('#my-login-screen');
-//       $$('.logoff').hide();
-//       $$('.login-screen-open').show();      
-//     }, function(error){
-//       console.error(error)
-//     })
-// });
 
 $$('#my-login-screen .login-screen-close').on('click', function () {
   $$('input#email').val('');
@@ -139,33 +120,12 @@ $$('.logoff').on('click', function () {
       $$('input#password').val('');
       $$('.logoff').hide();
       $$('.promocoes').hide();
+      $$('.pedidoindex').hide();
       $$('.login-screen-open').show();
     }, function(error){
       console.error(error)
     })  
   });
-
-
-
-// $$('#my-login-screen .SingOut').on('click', function () {
-//   app.loginScreen.close('#my-login-screen');
-//     $$('input#email').val('');
-//     $$('input#password').val('');
-//     firebase
-//     .auth()
-//     .signOut()
-//     .then( function () {
-//       this.$$('.toolbar-inner').text('Usuario nao autenticado');
-//       app.dialog.alert('Usuario nao autenticado');
-//       app.loginScreen.close('#my-login-screen');
-//       $$('.logoff').hide();
-//       $$('.cardapioindex').hide();
-//       $$('.login-screen-open').show();
-//     }, function(error){
-//         console.error(error)
-//     })
-// });
-
 
 $$('#my-login-screen .login-screen-close').on('click', function () {
   $$('input#email').val('');
@@ -190,24 +150,24 @@ $$('.logoff').on('click', function() {
 });
 
 
-// $$('#addButton').on('click', function () {
-//   var nome = $$('#nome').val();
-//   var email = $$('#emailorcamento').val();
-//   var telefone = $$('#telefone').val();
-//   var mensagem = $$('#mensagem').val();
+$$('#addButton').on('click', function () {
+  var nome = $$('#nome').val();
+  var email = $$('#emailpedido').val();
+  var telefone = $$('#telefone').val();
+  var mensagem = $$('#mensagem').val();
 
-//   var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem}
-//   console.log(formData);
-//   firebase.database().ref().child('cardapio').push(formData)
-//   .then( function () {
-//     app.dialog.alert('Pedido Efetuado com Sucesso');
-//     $$('input#nome').val('');
-//     $$('input#emailorcamento').val('');
-//     $$('input#telefone').val('');
-//     $$('input#mensagem').val('');
-//   }, function(error){
-//     app.dialog.alert('Erro, confira o console');
-//     console.error(error)
-//   })
-// });
+  var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem}
+  console.log(formData);
+  firebase.database().ref().child('pedido').push(formData)
+  .then( function () {
+    app.dialog.alert('Pedido Efetuado com Sucesso');
+    $$('input#nome').val('');
+    $$('input#emailpedido').val('');
+    $$('input#telefone').val('');
+    $$('textarea#mensagem').val('');
+  }, function(error){
+    app.dialog.alert('Erro, confira o console');
+    console.error(error)
+  })
+});
 
