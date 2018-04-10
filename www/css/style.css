@@ -41,6 +41,11 @@
     font-family: 'Libre Baskerville', serif;
 }
 
+.texto_form {
+    color: #FFFFFF;
+    font-family: 'Libre Baskerville', serif;
+}
+
 .navegacao_autenticacao {
     background-color: #0E0D0D;
     font-family: 'Libre Baskerville', serif;
@@ -105,3 +110,13 @@ div p {
     font-size: 15px;
     font-family: Arial;
 }
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+  .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+  }

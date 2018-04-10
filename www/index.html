@@ -56,25 +56,20 @@
                 <div class="block-title"></div>
                 <div class="list links-list">
                   <ul class="topicos_menu">
-                    <li>
-                      <a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a></li>
-                    <li>
-                      <a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a></li>
-                    <li>
-                    <li>
-                      <a href="/cardapio/" data-view=".view-main" class="panel-close cardapioindex">Cardápio</a>
-                    </li>
-                      <a href="/contato/" data-view=".view-main" class="panel-close">Contato</a>
-                    </li>                    
-                    <li>
-                        <a href="/promocoes/" data-view=".view-main" class="panel-close promocoes">Promoções</a>
-                    </li>
-                    <li>
-                      <a href="#" data-popup=".form-firebase" class="popup-open pedidoindex">Pedido</a>
-                    </li>
-                    <li>
-                        <a href="#" class="logoff">Sair</a>                        
-                      </li>
+                    <li><a href="#" class="login-screen-open" data-login-screen="#my-login-screen">Login</a></li>
+                    
+                    <li><a href="/sobre/" data-view=".view-main" class="panel-close">Sobre</a></li>   
+                    
+                    <li><a href="/cardapio/" data-view=".view-main" class="panel-close cardapioindex">Cardápio</a></li>
+                      
+                    <li><a href="/contato/" data-view=".view-main" class="panel-close">Contato</a></li>
+                                        
+                    <li><a href="/promocoes/" data-view=".view-main" class="panel-close promocoes">Promoções</a></li>
+                    
+                    <li><a href="#" data-popup=".form-firebase" class="popup-open pedidoindex">Pedido</a></li>
+                    
+                    <li><a href="#" class="logoff">Sair</a></li>
+                                                   
                   </ul>
                 </div>
                 <!-- <div class="block-title">Control Main View</div>
@@ -127,7 +122,7 @@
                 <div class="title sliding cabecalho">Jede Restaurantes</div>
                
                 <div class="right">
-                  <img src="img/favicon.png" alt="">                   
+                  <!-- <img src="img/favicon.png" alt="">                    -->
                   <!-- <a href="#" class="link icon-only panel-open" data-panel="right">
                     <i class="icon f7-icons ios-only">menu</i>
                     <i class="icon material-icons md-only">menu</i>
@@ -171,12 +166,23 @@
                     <div class="swiper-slide"><P>“Viva com segurança. Trabalhe com confiança.”</P></div>
                   </div>
                 </div>
-                <div>
-                    <img src="img/img3.jpg" alt="Img entrada">
-                    <P>“Pratos deliciosos e requintados”</P>
+
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/img3.jpg)" class="card-header align-items-flex-end">Journey To Mountains</div>
+                  
+                  <div class="card-content card-content-padding">
+                    <p class="date">“Pratos deliciosos e requintados”</p>
+                    <p>“Com um cardápio variado e uma culinária de excelência em sabor, há mais de 5 anos conseguimos agradar os paladares mais exigentes.”</p>
+                  </div>
+                  <div class="card-footer"><a href="#" class="link">Saiba mais</a></div>
                 </div>
-                <div class="citacoes">
-                    <P>“Com um cardápio variado e uma culinária de excelência em sabor, há mais de 5 anos conseguimos agradar os paladares mais exigentes.”</P>
+                <div class="card demo-card-header-pic">
+                  <div style="background-image:url(img/imgindex.jpg)" class="card-header align-items-flex-end">Lorem Ipsum</div>
+                  <div class="card-content card-content-padding">
+                    <p class="date">Posted on January 21, 2015</p>
+                    <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                  </div>
+                  <div class="card-footer"><a href="#" class="link">Conheça o nosso cardápio</a></div>
                 </div>
                                     
     
@@ -299,7 +305,7 @@
         </div>
 
         
-        <div class="popup form-firebase">
+        <div class="popup form-firebase theme-dark">
           <div class="view">
             <div class="page color-theme-black">
               <div class="navbar">
@@ -310,13 +316,13 @@
                       <span class="ios-only">Voltar</span>
                     </a>
                   </div>
-                  <div class="title">Contato</div>
+                  <div class="title cabecalho">Pedido</div>
                 </div>
               </div>
             
-            <div class="page-content">
+            <div class="page-content fundo_app">
               
-                <h1>Faça o seu pedido</h1>
+                <h1 class="titulos">Faça o seu pedido</h1>
           
               <div class="block-title"></div>
               <div class="list no-hairlines-md">
@@ -336,7 +342,7 @@
                       <div class="item-inner">
                         <div class="item-title item-label">E-mail</div>
                         <div class="item-input-wrap">
-                          <input type="email" id="emailpedido" placeholder="E-mail"/>
+                          <input type="email" id="emailpedido" placeholder="Digite seu e-mail"/>
                         </div>
                       </div>
                     </div>
@@ -346,7 +352,17 @@
                       <div class="item-inner">
                         <div class="item-title item-label">Telefone</div>
                         <div class="item-input-wrap">
-                          <input type="tel" id="telefone" placeholder="Digite seu Telefone"/>
+                          <input type="tel" id="telefone" placeholder="Digite seu telefone"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Endereço</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="endereco" placeholder="Digite seu endereço"/>
                         </div>
                       </div>
                     </div>
@@ -354,9 +370,9 @@
                   <li class="align-top">
                     <div class="item-content item-input">
                       <div class="item-inner">
-                        <div class="item-title item-label">Mensagem</div>
+                        <div class="item-title item-label">Prato</div>
                         <div class="item-input-wrap">
-                          <textarea id="mensagem" placeholder="Digite aqui sua mensagem"></textarea>
+                          <textarea id="prato" placeholder="Digite o prato que deseja"></textarea>
                         </div>
                       </div>
                     </div>
@@ -366,6 +382,7 @@
                   <!-- <input type="button" id="addButton" value="Enviar" class="button button-big button-fill button-raised"> -->
                   <a href="#" id="addButton" class="col button button-big button-fill button-raised addButton">Enviar</a>
                 </p>
+                </ul>
               </div>
             </div>
           </div>

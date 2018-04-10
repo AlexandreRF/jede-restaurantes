@@ -154,9 +154,10 @@ $$('#addButton').on('click', function () {
   var nome = $$('#nome').val();
   var email = $$('#emailpedido').val();
   var telefone = $$('#telefone').val();
-  var mensagem = $$('#mensagem').val();
+  var endereco = $$('#endereco').val();
+  var prato = $$('#prato').val();
 
-  var formData = {Nome: nome, Email: email, Telefone: telefone, Mensagem: mensagem}
+  var formData = {Nome: nome, Email: email, Telefone: telefone, Endereco: endereco, Prato: prato}
   console.log(formData);
   firebase.database().ref().child('pedido').push(formData)
   .then( function () {
@@ -164,7 +165,8 @@ $$('#addButton').on('click', function () {
     $$('input#nome').val('');
     $$('input#emailpedido').val('');
     $$('input#telefone').val('');
-    $$('textarea#mensagem').val('');
+    $$('input#endereco').val('');
+    $$('textarea#prato').val('');
   }, function(error){
     app.dialog.alert('Erro, confira o console');
     console.error(error)
