@@ -15,6 +15,10 @@ routes = [
     path: '/sobre/',
     url: './pages/sobre.html',
   },
+  {
+    path: '/imagens/',
+    url: './pages/imagens.html',
+  },
   // {
   //   path: '/cardapio/',
   //   url: './pages/cardapio.html',

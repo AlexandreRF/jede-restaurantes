@@ -1,15 +1,23 @@
-.titulos {
-    
+.titulo_index {
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 25px;
     color: #FFFFFF;
 }
 
+.titulos {
+    
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
+    color: #FFFFFF;
+    border-bottom: double;
+}
+
 .cabecalho {
     font-family: 'Archivo Black', sans-serif;
     /* color: #F01A1A; */
-    color: #EF5656;
+    color: #FFFFFF;
 }
 
 .icones {
@@ -20,7 +28,7 @@
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 16px;
-    color: #FFFFFF;
+     
 }
 
 .imagens_entrada {
@@ -29,6 +37,11 @@
     font-size: 16px;
     background-color: #0E0D0D;
 }
+
+/* .imagens_pratos {
+    margin: 0 auto;
+    text-align: center;
+} */
 
 .texto {
     color: #FFFFFF;
@@ -41,9 +54,57 @@
     font-family: 'Libre Baskerville', serif;
 }
 
+.texto_three {
+    color: #0E0D0D;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.texto_four {
+    text-align: center;
+    font-size: 22px;
+    color: #0E0D0D;
+    border-bottom: double;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.texto_card {
+    color: #0E0D0D;
+    font-size: 23px;
+    margin: 0 auto;
+}
+
+.texto_card_padrao {
+    text-align: center;
+    color: #0E0D0D;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.texto_card_two {
+    color: #0E0D0D;
+    font-family: 'Libre Baskerville', serif;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.texto_card_index {
+    color: #0E0D0D;
+    font-family: 'Libre Baskerville', serif;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
 .texto_form {
     color: #FFFFFF;
     font-family: 'Libre Baskerville', serif;
+}
+
+.color_link {
+    color: #EF5656;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.color_menu {
+    color: #EF5656;
 }
 
 .navegacao_autenticacao {
@@ -100,8 +161,6 @@ div p {
     border: #EF5656 double;
 }
 
-
-
 .logo {
     width: 5px;
 }
@@ -118,5 +177,63 @@ div p {
     color: #fff;
   }
   .demo-card-header-pic .card-content-padding .date{
+    color: #0E0D0D;
+  }
+
+  
+  .demo-facebook-card .card-header {
+    display: block;
+    padding: 10px;
+  }
+  .demo-facebook-card .demo-facebook-avatar {
+    float: left;
+  }
+  .demo-facebook-card .demo-facebook-name {
+    margin-left: 44px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .demo-facebook-card .demo-facebook-date {
+    margin-left: 44px;
+    font-size: 13px;
     color: #8e8e93;
   }
+  .demo-facebook-card .card-footer {
+    background: #0E0D0D;
+  }
+  .demo-facebook-card .card-footer a {
+    /* color: #81848b; */
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+  .demo-facebook-card .card-content img {
+    display: block;
+  }
+  .demo-facebook-card .card-content-padding {
+    padding: 15px 10px;
+  }
+  .demo-facebook-card .card-content-padding .likes {
+    color: #8e8e93;
+  }
+
+
+  .footer_card {
+      background-color:#0E0D0D;
+  }
+
+
+  .imagem_index {
+      width: 100%;
+
+  }
+
+  .texto_entrada {
+      padding-top: 0 auto;
+  }
+
+  .texto_estilo {
+    color: #FFFFFF;
+    font-family: 'Libre Baskerville', serif; 
+  }
+
+
